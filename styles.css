@@ -1,0 +1,44 @@
+.simple-alert {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 5px 0;
+  padding: 5px 45px 5px 5px;
+}
+
+.simple-alert.error {
+  background-color: #f06464;
+  border: solid 1px #d91515;
+}
+
+.simple-alert.success {
+  background-color: lightgreen;
+  border: solid 1px #38e038;
+}
+
+.simple-alert.warning {
+  background-color: moccasin;
+  border: solid 1px #ffbf4f;
+}
+
+.simple-alert.default {
+  background-color: lightblue;
+  border: solid 1px #5fb3ce;
+}
+
+.simple-alert__content {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.simple-alert__dismiss {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/close.png");
+  font-size: 0;
+  text-indent: -9999px;
+}

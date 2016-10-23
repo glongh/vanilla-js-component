@@ -1,22 +1,27 @@
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
 <body>
-	<div id="component">
-		<button id="default">Show Default Message</button>
-		<button id="success">Show Success Message</button>
-		<button id="error">Show Error Message</button>
-	</div>
-	<!--<script type="text/javascript" src="vanilla-js-component-playground.js"></script>-->
-	<script type="text/javascript" src="vanilla-js-component.js"></script>
+	<button id="simple-alert__button--error">Show Me An Error Alert</button>
+	<section class="demo-section" id="alerts"></section>
 
+	<script type="text/javascript" src="vanilla-js-component.js"></script>
 	<script type="text/javascript">
 		(function() {
-			var default_btn = document.getElementById( "default" );
-			default_btn.addEventListener( "click", function() {
-				var default_alert = new SimpleAlert("Hello Worl!");
-				default_alert;
+			var btn_error = document.getElementById('simple-alert__button--error');
+
+			// show error
+			btn_error.addEventListener("click", function(e) {
+				e.preventDefault();
+				var sa = new SimpleAlert({
+					wrapper: document.getElementById("alerts"),
+					type: "error",
+					message: "Show me an error!"
+				});
+				sa.show();
 			});
 		})();
-
 	</script>
 </body>
 </html>
