@@ -1,0 +1,22 @@
+<html>
+<body>
+	<div id="component">
+		<button id="default">Show Default Message</button>
+		<button id="success">Show Success Message</button>
+		<button id="error">Show Error Message</button>
+	</div>
+	<!--<script type="text/javascript" src="vanilla-js-component-playground.js"></script>-->
+	<script type="text/javascript" src="vanilla-js-component.js"></script>
+
+	<script type="text/javascript">
+		(function() {
+			var default_btn = document.getElementById( "default" );
+			default_btn.addEventListener( "click", function() {
+				var default_alert = new SimpleAlert("Hello Worl!");
+				default_alert;
+			});
+		})();
+
+	</script>
+</body>
+</html>
